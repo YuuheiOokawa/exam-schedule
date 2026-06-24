@@ -1,0 +1,55 @@
+import { SeedQualification } from '../../types/index.js';
+
+export const additionalSeedQualifications: SeedQualification[] = [
+  // ─── 公的資格 / ビジネス・販売 ────────────────────────────────────
+  { name: '販売士 1級', main_category: '公的資格', sub_category: 'ビジネス・販売', official_url: 'https://www.kentei.ne.jp/retail/grade1', description: '高度なマーケティング・販売管理知識を認定する日本商工会議所の検定', is_scrapable: false, exam_format: 'fixed_date', requires_renewal: false, renewal_period_years: null },
+  { name: '販売士 2級', main_category: '公的資格', sub_category: 'ビジネス・販売', official_url: 'https://www.kentei.ne.jp/retail/grade2', description: 'ストアマネージャーレベルの販売知識を認定する日本商工会議所の検定', is_scrapable: false, exam_format: 'anytime', requires_renewal: false, renewal_period_years: null },
+  { name: '販売士 3級', main_category: '公的資格', sub_category: 'ビジネス・販売', official_url: 'https://www.kentei.ne.jp/retail/grade3', description: '販売の基礎知識を認定する日本商工会議所の検定（CBT方式）', is_scrapable: false, exam_format: 'anytime', requires_renewal: false, renewal_period_years: null },
+  { name: '秘書技能検定 準1級', main_category: '公的資格', sub_category: 'ビジネス・販売', official_url: 'https://jitsumu-kentei.jp/HS/index', description: '上位の秘書・ビジネスマナーを認定する公的検定', is_scrapable: false, exam_format: 'fixed_date', requires_renewal: false, renewal_period_years: null },
+  { name: '秘書技能検定 2級', main_category: '公的資格', sub_category: 'ビジネス・販売', official_url: 'https://jitsumu-kentei.jp/HS/index', description: '実用的な秘書・ビジネスマナーを認定する公的検定', is_scrapable: false, exam_format: 'fixed_date', requires_renewal: false, renewal_period_years: null },
+  { name: 'ビジネス文書技能検定 1級', main_category: '公的資格', sub_category: 'ビジネス・販売', official_url: 'https://jitsumu-kentei.jp/BD/index', description: '高度なビジネス文書作成力を認定する公的検定', is_scrapable: false, exam_format: 'fixed_date', requires_renewal: false, renewal_period_years: null },
+  { name: 'ビジネス文書技能検定 2級', main_category: '公的資格', sub_category: 'ビジネス・販売', official_url: 'https://jitsumu-kentei.jp/BD/index', description: '実用的なビジネス文書作成力を認定する公的検定', is_scrapable: false, exam_format: 'fixed_date', requires_renewal: false, renewal_period_years: null },
+
+  // ─── 公的資格 / IT・情報 ──────────────────────────────────────────
+  { name: 'MOS Word 365', main_category: '公的資格', sub_category: 'IT・情報', official_url: 'https://mos.odyssey-com.co.jp/', description: 'Microsoft Word 365の操作スキルを認定するMicrosoft公認試験', is_scrapable: false, exam_format: 'anytime', requires_renewal: false, renewal_period_years: null },
+  { name: 'MOS Excel 365', main_category: '公的資格', sub_category: 'IT・情報', official_url: 'https://mos.odyssey-com.co.jp/', description: 'Microsoft Excel 365の操作スキルを認定するMicrosoft公認試験', is_scrapable: false, exam_format: 'anytime', requires_renewal: false, renewal_period_years: null },
+  { name: 'MOS PowerPoint 365', main_category: '公的資格', sub_category: 'IT・情報', official_url: 'https://mos.odyssey-com.co.jp/', description: 'Microsoft PowerPoint 365の操作スキルを認定するMicrosoft公認試験', is_scrapable: false, exam_format: 'anytime', requires_renewal: false, renewal_period_years: null },
+  { name: 'MOS Access 2019', main_category: '公的資格', sub_category: 'IT・情報', official_url: 'https://mos.odyssey-com.co.jp/', description: 'Microsoft Access 2019のデータベース操作スキルを認定するMicrosoft公認試験', is_scrapable: false, exam_format: 'anytime', requires_renewal: false, renewal_period_years: null },
+  { name: 'ITコーディネータ', main_category: '公的資格', sub_category: 'IT・情報', official_url: 'https://itc.or.jp/examination/', description: 'IT経営を推進する専門家を認定する公的資格', is_scrapable: false, exam_format: 'anytime', requires_renewal: true, renewal_period_years: 2 },
+
+  // ─── 国家資格 / 美容・理容 ────────────────────────────────────────
+  { name: '美容師', main_category: '国家資格', sub_category: '美容・理容', official_url: 'https://www.beautysalon-licence.jp/', description: 'パーマ・カット・メイク等の美容業を行うための国家資格', is_scrapable: false, exam_format: 'fixed_date', requires_renewal: false, renewal_period_years: null },
+  { name: '理容師', main_category: '国家資格', sub_category: '美容・理容', official_url: 'https://www.barber-licence.jp/', description: 'カット・シェービング等の理容業を行うための国家資格', is_scrapable: false, exam_format: 'fixed_date', requires_renewal: false, renewal_period_years: null },
+  { name: '柔道整復師', main_category: '国家資格', sub_category: '美容・理容', official_url: 'https://www.zaijusei.com/', description: '骨折・脱臼・打撲などの施術を行う国家資格', is_scrapable: false, exam_format: 'fixed_date', requires_renewal: false, renewal_period_years: null },
+  { name: 'はり師', main_category: '国家資格', sub_category: '美容・理容', official_url: 'https://www.harikyu-licence.jp/', description: '鍼による施術を行うための国家資格', is_scrapable: false, exam_format: 'fixed_date', requires_renewal: false, renewal_period_years: null },
+  { name: 'きゅう師', main_category: '国家資格', sub_category: '美容・理容', official_url: 'https://www.harikyu-licence.jp/', description: '灸による施術を行うための国家資格', is_scrapable: false, exam_format: 'fixed_date', requires_renewal: false, renewal_period_years: null },
+  { name: 'あん摩マッサージ指圧師', main_category: '国家資格', sub_category: '美容・理容', official_url: 'https://www.anma-licence.jp/', description: 'あん摩・マッサージ・指圧による施術を行う国家資格', is_scrapable: false, exam_format: 'fixed_date', requires_renewal: false, renewal_period_years: null },
+
+  // ─── 国家資格 / 教育・保育 ────────────────────────────────────────
+  { name: '保育士', main_category: '国家資格', sub_category: '教育・保育', official_url: 'https://www.hoyokyo.or.jp/exam/', description: '乳幼児の保育・教育を行う専門家の国家資格', is_scrapable: false, exam_format: 'fixed_date', requires_renewal: false, renewal_period_years: null },
+  { name: '幼稚園教諭 (普通免許状)', main_category: '国家資格', sub_category: '教育・保育', official_url: 'https://www.mext.go.jp/', description: '幼稚園で指導を行うための教員免許（国家資格）', is_scrapable: false, exam_format: 'fixed_date', requires_renewal: false, renewal_period_years: null },
+  { name: '小学校教諭 (普通免許状)', main_category: '国家資格', sub_category: '教育・保育', official_url: 'https://www.mext.go.jp/', description: '小学校で指導を行うための教員免許（国家資格）', is_scrapable: false, exam_format: 'fixed_date', requires_renewal: false, renewal_period_years: null },
+
+  // ─── 民間資格 / デザイン・Web ─────────────────────────────────────
+  { name: 'HTML5プロフェッショナル認定試験 Level 1', main_category: '民間資格', sub_category: 'デザイン・Web', official_url: 'https://html5exam.jp/outline/lv1.html', description: 'HTML/CSS/JavaScriptの基礎を認定するWeb標準技術者試験', is_scrapable: false, exam_format: 'anytime', requires_renewal: false, renewal_period_years: null },
+  { name: 'HTML5プロフェッショナル認定試験 Level 2', main_category: '民間資格', sub_category: 'デザイン・Web', official_url: 'https://html5exam.jp/outline/lv2.html', description: 'HTML5アプリケーション開発の上級スキルを認定するWeb標準技術者試験', is_scrapable: false, exam_format: 'anytime', requires_renewal: false, renewal_period_years: null },
+  { name: 'Webクリエイター能力認定試験 上級', main_category: '民間資格', sub_category: 'デザイン・Web', official_url: 'https://www.sikaku.gr.jp/ns/wc/', description: 'Webデザイン・Webサイト制作の実践力を認定するサーティファイの試験', is_scrapable: false, exam_format: 'anytime', requires_renewal: false, renewal_period_years: null },
+  { name: 'Adobe Certified Professional (Photoshop)', main_category: '民間資格', sub_category: 'デザイン・Web', official_url: 'https://www.adobe.com/jp/products/photoshop/certifications.html', description: 'Adobe Photoshopのプロフェッショナルスキルを認定するAdobe公認試験', is_scrapable: false, exam_format: 'anytime', requires_renewal: true, renewal_period_years: 3 },
+  { name: 'Adobe Certified Professional (Illustrator)', main_category: '民間資格', sub_category: 'デザイン・Web', official_url: 'https://www.adobe.com/jp/products/illustrator/certifications.html', description: 'Adobe Illustratorのプロフェッショナルスキルを認定するAdobe公認試験', is_scrapable: false, exam_format: 'anytime', requires_renewal: true, renewal_period_years: 3 },
+  { name: 'カラーコーディネーター検定試験 アドバンスクラス', main_category: '民間資格', sub_category: 'デザイン・Web', official_url: 'https://www.kentei.ne.jp/color', description: '色彩の専門知識・活用スキルを認定する東京商工会議所の検定', is_scrapable: false, exam_format: 'anytime', requires_renewal: false, renewal_period_years: null },
+  { name: 'カラーコーディネーター検定試験 スタンダードクラス', main_category: '民間資格', sub_category: 'デザイン・Web', official_url: 'https://www.kentei.ne.jp/color', description: '色彩の基礎知識を認定する東京商工会議所の検定', is_scrapable: false, exam_format: 'anytime', requires_renewal: false, renewal_period_years: null },
+
+  // ─── 民間資格 / マーケティング ────────────────────────────────────
+  { name: 'Googleアナリティクス個人認定資格 (GAIQ)', main_category: '民間資格', sub_category: 'マーケティング', official_url: 'https://skillshop.withgoogle.com/', description: 'Google Analyticsの利用スキルを認定するGoogle公認資格（無料）', is_scrapable: false, exam_format: 'anytime', requires_renewal: true, renewal_period_years: 1 },
+  { name: 'Google広告認定資格', main_category: '民間資格', sub_category: 'マーケティング', official_url: 'https://skillshop.withgoogle.com/', description: 'Google広告（検索・ディスプレイ等）の運用スキルを認定するGoogle公認資格', is_scrapable: false, exam_format: 'anytime', requires_renewal: true, renewal_period_years: 1 },
+  { name: 'ウェブ解析士', main_category: '民間資格', sub_category: 'マーケティング', official_url: 'https://www.waca.associates/jp/learning/wac/', description: 'Webマーケティング・データ解析の専門知識を認定する民間資格', is_scrapable: false, exam_format: 'anytime', requires_renewal: true, renewal_period_years: 1 },
+  { name: '上級ウェブ解析士', main_category: '民間資格', sub_category: 'マーケティング', official_url: 'https://www.waca.associates/jp/learning/swac/', description: 'Webマーケティング戦略の上位スキルを認定する民間資格', is_scrapable: false, exam_format: 'fixed_date', requires_renewal: true, renewal_period_years: 1 },
+  { name: 'HubSpot コンテンツマーケティング認定資格', main_category: '民間資格', sub_category: 'マーケティング', official_url: 'https://app.hubspot.com/academy/certifications', description: 'コンテンツマーケティングの戦略・実践スキルを認定するHubSpot Academy資格', is_scrapable: false, exam_format: 'anytime', requires_renewal: true, renewal_period_years: 1 },
+  { name: 'SNSマーケティング検定', main_category: '民間資格', sub_category: 'マーケティング', official_url: 'https://www.sns-kentei.com/', description: 'SNSを活用したビジネスマーケティングを認定する検定', is_scrapable: false, exam_format: 'anytime', requires_renewal: false, renewal_period_years: null },
+
+  // ─── 民間資格 / 人事・労務 ────────────────────────────────────────
+  { name: 'メンタルヘルス・マネジメント検定 Ⅰ種', main_category: '民間資格', sub_category: '人事・労務', official_url: 'https://www.mental-health.ne.jp/exam/', description: '経営幹部レベルのメンタルヘルス管理を認定する大阪商工会議所の検定', is_scrapable: false, exam_format: 'fixed_date', requires_renewal: false, renewal_period_years: null },
+  { name: 'メンタルヘルス・マネジメント検定 Ⅱ種', main_category: '民間資格', sub_category: '人事・労務', official_url: 'https://www.mental-health.ne.jp/exam/', description: '管理職レベルのメンタルヘルス管理を認定する大阪商工会議所の検定', is_scrapable: false, exam_format: 'fixed_date', requires_renewal: false, renewal_period_years: null },
+  { name: 'メンタルヘルス・マネジメント検定 Ⅲ種', main_category: '民間資格', sub_category: '人事・労務', official_url: 'https://www.mental-health.ne.jp/exam/', description: '一般社員レベルのセルフメンタルケアを認定する大阪商工会議所の検定', is_scrapable: false, exam_format: 'anytime', requires_renewal: false, renewal_period_years: null },
+  { name: 'キャリアコンサルタント', main_category: '国家資格', sub_category: '教育・保育', official_url: 'https://careerconsultant.mhlw.go.jp/n/n_exam/exam_intro.html', description: '職業相談・キャリア形成支援を行う専門家の国家資格', is_scrapable: false, exam_format: 'fixed_date', requires_renewal: true, renewal_period_years: 5 },
+];

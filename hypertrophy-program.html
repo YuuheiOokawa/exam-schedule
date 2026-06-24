@@ -1,0 +1,867 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>筋肥大トレーニングプログラム | 25歳 中級者向け</title>
+<style>
+  @page { size: A4 portrait; margin: 15mm 14mm; }
+  @media print {
+    .page-break { page-break-before: always; }
+    body { font-size: 11px; }
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Hiragino Kaku Gothic ProN', 'Meiryo', sans-serif; font-size: 12px; color: #1a1a1a; line-height: 1.6; background: #fff; }
+
+  /* Cover */
+  .cover { background: linear-gradient(135deg, #1e3a5f 0%, #2563eb 100%); color: #fff; padding: 60px 40px; text-align: center; min-height: 200px; border-radius: 0 0 20px 20px; margin-bottom: 24px; }
+  .cover h1 { font-size: 26px; font-weight: 900; letter-spacing: 2px; margin-bottom: 10px; }
+  .cover .subtitle { font-size: 14px; opacity: 0.85; margin-bottom: 20px; }
+  .cover .meta-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 12px; max-width: 600px; margin: 0 auto; }
+  .cover .meta-box { background: rgba(255,255,255,0.15); border-radius: 8px; padding: 10px; }
+  .cover .meta-box .label { font-size: 9px; opacity: 0.7; text-transform: uppercase; letter-spacing: 1px; }
+  .cover .meta-box .value { font-size: 16px; font-weight: 700; margin-top: 2px; }
+
+  /* Section headers */
+  .section { margin-bottom: 24px; }
+  .section-header { background: #2563eb; color: #fff; padding: 10px 16px; border-radius: 6px 6px 0 0; font-size: 14px; font-weight: 700; display: flex; justify-content: space-between; align-items: center; }
+  .section-header.green { background: #16a34a; }
+  .section-header.purple { background: #7c3aed; }
+  .section-header.orange { background: #ea580c; }
+  .section-header.teal { background: #0d9488; }
+  .section-header.red { background: #dc2626; }
+  .section-body { border: 1.5px solid #2563eb; border-top: none; border-radius: 0 0 6px 6px; padding: 14px; }
+  .section-body.green { border-color: #16a34a; }
+  .section-body.purple { border-color: #7c3aed; }
+  .section-body.orange { border-color: #ea580c; }
+  .section-body.teal { border-color: #0d9488; }
+
+  /* Exercise blocks */
+  .exercise-block { background: #f8fafc; border-left: 4px solid #2563eb; padding: 12px 14px; margin-bottom: 14px; border-radius: 0 6px 6px 0; }
+  .exercise-block.green { border-left-color: #16a34a; }
+  .exercise-block.purple { border-left-color: #7c3aed; }
+  .exercise-block.orange { border-left-color: #ea580c; }
+  .exercise-block.teal { border-left-color: #0d9488; }
+  .exercise-block.required { border-left-color: #dc2626; background: #fff5f5; }
+  .exercise-title { font-size: 13px; font-weight: 700; margin-bottom: 8px; display: flex; align-items: center; gap: 8px; }
+  .badge { font-size: 9px; font-weight: 700; padding: 2px 8px; border-radius: 999px; color: #fff; background: #2563eb; }
+  .badge.required { background: #dc2626; }
+  .badge.green { background: #16a34a; }
+  .badge.orange { background: #ea580c; }
+  .badge.purple { background: #7c3aed; }
+
+  /* Tables */
+  table { width: 100%; border-collapse: collapse; margin: 8px 0; font-size: 11px; }
+  th { background: #2563eb; color: #fff; padding: 6px 8px; text-align: left; font-weight: 600; }
+  th.green { background: #16a34a; }
+  th.purple { background: #7c3aed; }
+  th.orange { background: #ea580c; }
+  th.teal { background: #0d9488; }
+  td { padding: 5px 8px; border-bottom: 1px solid #e5e7eb; vertical-align: top; }
+  tr:nth-child(even) td { background: #f1f5f9; }
+  tr:last-child td { border-bottom: none; }
+
+  /* Spec row tables */
+  .spec-table td:first-child { font-weight: 600; color: #374151; width: 38%; }
+
+  /* Info boxes */
+  .info-box { background: #eff6ff; border: 1px solid #bfdbfe; border-radius: 6px; padding: 10px 12px; margin: 8px 0; font-size: 11px; }
+  .warn-box { background: #fef9c3; border: 1px solid #fde047; border-radius: 6px; padding: 10px 12px; margin: 8px 0; font-size: 11px; }
+  .tip-box { background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 6px; padding: 10px 12px; margin: 8px 0; font-size: 11px; }
+
+  /* Grid */
+  .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 8px 0; }
+  .grid3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; margin: 8px 0; }
+
+  /* Sub headings */
+  h2 { font-size: 13px; font-weight: 700; color: #1e3a5f; margin: 14px 0 6px; padding-left: 8px; border-left: 3px solid #2563eb; }
+  h3 { font-size: 11px; font-weight: 700; color: #374151; margin: 10px 0 4px; }
+  p { font-size: 11px; margin: 4px 0; }
+  ul { padding-left: 16px; font-size: 11px; }
+  li { margin: 2px 0; }
+
+  .page-break { page-break-before: always; }
+  .highlight { background: #fef3c7; padding: 1px 4px; border-radius: 3px; font-weight: 600; }
+  .tag { background: #dbeafe; color: #1e40af; padding: 2px 6px; border-radius: 4px; font-size: 9px; font-weight: 600; margin-right: 4px; }
+  .tag.red { background: #fee2e2; color: #dc2626; }
+  .tag.green { background: #dcfce7; color: #16a34a; }
+  .tag.orange { background: #ffedd5; color: #ea580c; }
+</style>
+</head>
+<body>
+
+<!-- ========== COVER ========== -->
+<div class="cover">
+  <h1>筋肥大トレーニングプログラム</h1>
+  <div class="subtitle">中級者向け 週3〜4回 | 胸・肩・腕 特化プログラム</div>
+  <div class="meta-grid">
+    <div class="meta-box"><div class="label">年齢</div><div class="value">25歳</div></div>
+    <div class="meta-box"><div class="label">体重</div><div class="value">76.5kg</div></div>
+    <div class="meta-box"><div class="label">体脂肪率</div><div class="value">22%</div></div>
+    <div class="meta-box"><div class="label">期間</div><div class="value">4週間</div></div>
+  </div>
+</div>
+
+<!-- ========== P1: プログラム概要 ========== -->
+<div class="section">
+  <div class="section-header">1. プログラム概要</div>
+  <div class="section-body">
+    <div class="grid2">
+      <div>
+        <h3>🎯 主要目標</h3>
+        <ul>
+          <li>筋肥大（全身・特に上半身）</li>
+          <li>ベンチプレス 67.5kg → 80kg</li>
+          <li>スクワット 100kg → 115kg</li>
+          <li>肩幅を広く・胸板を厚く・腕を太く</li>
+        </ul>
+      </div>
+      <div>
+        <h3>📋 プログラム構造</h3>
+        <ul>
+          <li>Day1：胸（大胸筋 全域）</li>
+          <li>Day2：肩（三角筋 全域 + 僧帽筋）</li>
+          <li>Day3：腕（上腕二・三頭 + 前腕）</li>
+          <li>毎セッション：ベンチプレス＋スクワット必須</li>
+        </ul>
+      </div>
+    </div>
+
+    <table style="margin-top:12px;">
+      <thead><tr><th>項目</th><th>現在値</th><th>基準重量（1RM）</th><th>メイン使用重量目安</th></tr></thead>
+      <tbody>
+        <tr><td>ベンチプレス</td><td>67.5kg</td><td>67.5kg</td><td>50〜60kg（75〜90%）</td></tr>
+        <tr><td>スクワット</td><td>100kg</td><td>100kg</td><td>70〜90kg（70〜90%）</td></tr>
+        <tr><td>デッドリフト</td><td>100kg</td><td>100kg</td><td>参考値（本プログラム外）</td></tr>
+      </tbody>
+    </table>
+
+    <table style="margin-top:10px;">
+      <thead><tr><th>Day</th><th>メインテーマ</th><th>ベンチプレス強度</th><th>スクワット強度</th><th>所要時間</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Day1</strong></td><td>胸（大胸筋）</td><td>🔴 高強度メイン（85〜90%）</td><td>🟡 補助（70%）</td><td>100〜120分</td></tr>
+        <tr><td><strong>Day2</strong></td><td>肩（三角筋）</td><td>🟡 中強度補助（70〜75%）</td><td>🔴 高強度メイン（80〜87.5%）</td><td>100〜120分</td></tr>
+        <tr><td><strong>Day3</strong></td><td>腕（二・三頭・前腕）</td><td>🟠 中強度（75〜80%）</td><td>🟡 中補助（70〜75%）</td><td>90〜110分</td></tr>
+      </tbody>
+    </table>
+
+    <div class="info-box" style="margin-top:10px;">
+      <strong>💡 設計思想：</strong>毎セッションにベンチプレス＋スクワットを組み込む一方、メインテーマの日はその種目を高強度で実施し、補助日は重量を下げて回復を優先。中級者に必要な「頻度×強度のバランス」を実現するプログラムです。
+    </div>
+  </div>
+</div>
+
+<!-- ========== P2: Day1 胸 ========== -->
+<div class="section page-break">
+  <div class="section-header">2. Day1｜胸（大胸筋 全域）</div>
+  <div class="section-body">
+
+    <!-- BP -->
+    <div class="exercise-block required">
+      <div class="exercise-title">
+        ① ベンチプレス
+        <span class="badge required">必須・MAIN</span>
+        <span class="tag red">胸メイン日：高強度</span>
+      </div>
+      <table class="spec-table">
+        <tbody>
+          <tr><td>目的</td><td>大胸筋中部・上部の最大筋力向上と肥大。胸メイン日のため最高強度で実施。</td></tr>
+          <tr><td>鍛えられる部位</td><td>大胸筋（主）、三角筋前部、上腕三頭筋（副）</td></tr>
+          <tr><td>ウォームアップ</td><td>20kg × 10rep → 40kg × 6rep → 52.5kg × 3rep（本番前）</td></tr>
+          <tr><td>メインセット重量</td><td><span class="highlight">57.5kg（1RMの約85%）</span></td></tr>
+          <tr><td>セット × 回数</td><td>5セット × 4〜6rep（最終セットは限界まで）</td></tr>
+          <tr><td>インターバル</td><td>3〜4分（高強度のため十分な回復）</td></tr>
+        </tbody>
+      </table>
+      <div class="grid2" style="margin-top:8px;">
+        <div class="tip-box">
+          <strong>フォームポイント：</strong>
+          <ul>
+            <li>肩甲骨を寄せて胸を張り、自然なアーチを作る</li>
+            <li>グリップ幅は肩幅の1.5〜1.6倍</li>
+            <li>バーを乳頭ライン〜みぞおち上部に下ろす</li>
+            <li>足をしっかり床につけ、脚で踏ん張る</li>
+          </ul>
+        </div>
+        <div class="warn-box">
+          <strong>注意点：</strong>
+          <ul>
+            <li>首に力が入らないよう後頭部をベンチに固定</li>
+            <li>手首をまっすぐ保ち、手のひら全体でグリップ</li>
+            <li>バーを「胸に落とす」のではなく「胸でコントロール」</li>
+            <li>5セット目はスポッターをつけること</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Squat -->
+    <div class="exercise-block" style="border-left-color:#f59e0b;background:#fffbeb;">
+      <div class="exercise-title">
+        ② スクワット
+        <span class="badge" style="background:#f59e0b;">必須・補助</span>
+        <span class="tag orange">胸メイン日：中軽度</span>
+      </div>
+      <table class="spec-table">
+        <tbody>
+          <tr><td>目的</td><td>下半身・体幹の活性化。疲労を蓄積させないよう軽めで実施。</td></tr>
+          <tr><td>鍛えられる部位</td><td>大腿四頭筋、大殿筋、ハムストリングス、体幹</td></tr>
+          <tr><td>ウォームアップ</td><td>40kg × 8rep → 55kg × 5rep</td></tr>
+          <tr><td>メインセット重量</td><td><span class="highlight">65〜70kg（1RMの65〜70%）</span></td></tr>
+          <tr><td>セット × 回数</td><td>3セット × 8rep</td></tr>
+          <tr><td>インターバル</td><td>2〜2.5分</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- インクラインダンベルプレス -->
+    <div class="exercise-block green">
+      <div class="exercise-title">③ インクラインダンベルプレス <span class="badge green">大胸筋上部</span></div>
+      <table class="spec-table">
+        <tbody>
+          <tr><td>目的</td><td>大胸筋上部を重点的に肥大させ、鎖骨下の厚みと肩幅を補完する立体的な胸板を作る</td></tr>
+          <tr><td>鍛えられる部位</td><td>大胸筋上部（主）、三角筋前部（副）</td></tr>
+          <tr><td>重量目安</td><td>片手20〜24kg × 4セット × 10〜12rep</td></tr>
+          <tr><td>インターバル</td><td>2〜2.5分</td></tr>
+          <tr><td>フォームポイント</td><td>インクライン30〜45°。ダンベルを内側に向けながら内転（顎の先に向かって押す）。胸の上部を意識してストレッチを深く取る。</td></tr>
+          <tr><td>効かせるコツ</td><td>トップで1秒止め、大胸筋上部の収縮を感じる。下ろす際も2〜3秒かけてエキセントリックを意識。</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- ディップス -->
+    <div class="exercise-block green">
+      <div class="exercise-title">④ ディップス（前傾） <span class="badge green">大胸筋下部</span></div>
+      <table class="spec-table">
+        <tbody>
+          <tr><td>目的</td><td>大胸筋下部・外側を発達させ、「ペクトラルライン」と胸板の厚みを作る</td></tr>
+          <tr><td>鍛えられる部位</td><td>大胸筋下部・外側（主）、上腕三頭筋（副）</td></tr>
+          <tr><td>重量目安</td><td>自体重 × 3セット × 10〜15rep。余裕があれば+10kgプレート</td></tr>
+          <tr><td>インターバル</td><td>2分</td></tr>
+          <tr><td>フォームポイント</td><td>体を前傾（30〜45°）させることで大胸筋に効く。腕を開き気味に保持し、深く下ろす（肘90°以上）。</td></tr>
+          <tr><td>注意点</td><td>三頭筋優位にならないよう前傾を意識。肩が詰まる感じがある場合は可動域を小さくする。</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- ペックデックフライ -->
+    <div class="exercise-block green">
+      <div class="exercise-title">⑤ ペックデック（またはケーブルフライ） <span class="badge green">大胸筋中部</span></div>
+      <table class="spec-table">
+        <tbody>
+          <tr><td>目的</td><td>大胸筋中部の内側の収縮感を高め、胸の「谷間」と密度を作る</td></tr>
+          <tr><td>鍛えられる部位</td><td>大胸筋中部（主）、大胸筋内側</td></tr>
+          <tr><td>重量目安</td><td>ペックデック：40〜50kg × 3セット × 12〜15rep<br>ケーブルフライ：各15〜20kg × 3セット × 12〜15rep</td></tr>
+          <tr><td>インターバル</td><td>1.5〜2分</td></tr>
+          <tr><td>フォームポイント</td><td>肘を「抱え込む」イメージで内転。トップで肘同士を近づけ最大収縮。ボトムでは深くストレッチ。</td></tr>
+          <tr><td>効かせるコツ</td><td>重量より「収縮感」を優先。肩が上がらないよう肩甲骨を下制。</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- インクラインダンベルフライ -->
+    <div class="exercise-block green">
+      <div class="exercise-title">⑥ インクラインダンベルフライ <span class="badge green">大胸筋上部ストレッチ</span></div>
+      <table class="spec-table">
+        <tbody>
+          <tr><td>目的</td><td>大胸筋上部のストレッチ刺激で筋線維を伸ばし、長頭（外側付着部）を発達させる</td></tr>
+          <tr><td>鍛えられる部位</td><td>大胸筋上部・外側（ストレッチ特化）</td></tr>
+          <tr><td>重量目安</td><td>片手14〜18kg × 3セット × 12〜15rep</td></tr>
+          <tr><td>インターバル</td><td>1.5分</td></tr>
+          <tr><td>フォームポイント</td><td>肘をやや曲げ（軽く固定）、大きな弧を描いて下ろす。下端でしっかりストレッチを感じた後、ゆっくり戻す。</td></tr>
+          <tr><td>注意点</td><td>重さで肩が傷まないよう、低重量・高コントロールで実施すること。</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- 補助：ケーブルクロスオーバー -->
+    <div class="exercise-block" style="border-left-color:#64748b;background:#f8fafc;">
+      <div class="exercise-title">⑦【補助】ケーブルクロスオーバー（ハイプーリー） <span class="badge" style="background:#64748b;">仕上げ</span></div>
+      <table class="spec-table">
+        <tbody>
+          <tr><td>目的</td><td>大胸筋下部〜中部の仕上げ。パンプアップと血流促進。</td></tr>
+          <tr><td>重量目安</td><td>各15〜20kg × 3セット × 15rep</td></tr>
+          <tr><td>インターバル</td><td>1分</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="warn-box">
+      <strong>Day1 総ボリューム目安：</strong>
+      ベンチプレス（5set）＋スクワット（3set）＋胸種目（約16〜18set）＝計24〜26set。所要時間 <strong>約110〜120分</strong>。
+    </div>
+  </div>
+</div>
+
+<!-- ========== P3: Day2 肩 ========== -->
+<div class="section page-break">
+  <div class="section-header green">3. Day2｜肩（三角筋全域 + 僧帽筋）</div>
+  <div class="section-body green">
+
+    <!-- Squat MAIN -->
+    <div class="exercise-block required">
+      <div class="exercise-title">
+        ① スクワット
+        <span class="badge required">必須・MAIN</span>
+        <span class="tag red">肩メイン日：高強度</span>
+      </div>
+      <table class="spec-table">
+        <tbody>
+          <tr><td>目的</td><td>下半身・臀部の最大筋力向上と肥大。Day2はスクワットを高強度で実施。</td></tr>
+          <tr><td>鍛えられる部位</td><td>大腿四頭筋（主）、大殿筋、ハムストリングス、脊柱起立筋</td></tr>
+          <tr><td>ウォームアップ</td><td>40kg × 10rep → 60kg × 6rep → 75kg × 3rep</td></tr>
+          <tr><td>メインセット重量</td><td><span class="highlight">82.5〜85kg（1RMの82.5〜85%）</span></td></tr>
+          <tr><td>セット × 回数</td><td>5セット × 4〜6rep</td></tr>
+          <tr><td>インターバル</td><td>3〜4分</td></tr>
+          <tr><td>フォームポイント</td><td>バーをハイバーまたはローバーで担ぐ。足幅は肩幅〜やや広め。膝とつま先の向きを一致させ、股関節から折りたたむ。深さは太ももが床と平行以下。</td></tr>
+          <tr><td>注意点</td><td>腰丸め（ブットウィンク）に注意。骨盤が後傾する前のギリギリの深さで止める。</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- BP補助 -->
+    <div class="exercise-block" style="border-left-color:#f59e0b;background:#fffbeb;">
+      <div class="exercise-title">② ベンチプレス <span class="badge" style="background:#f59e0b;">必須・補助</span> <span class="tag orange">肩メイン日：軽度維持</span></div>
+      <table class="spec-table">
+        <tbody>
+          <tr><td>目的</td><td>上半身の血流促進と技術維持。三角筋前部のウォームアップを兼ねる。</td></tr>
+          <tr><td>重量目安</td><td><span class="highlight">47.5〜50kg（1RMの70〜75%）</span></td></tr>
+          <tr><td>セット × 回数</td><td>3セット × 8〜10rep</td></tr>
+          <tr><td>インターバル</td><td>2分</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- OHP -->
+    <div class="exercise-block green">
+      <div class="exercise-title">③ ダンベルショルダープレス <span class="badge green">三角筋前部・中部</span></div>
+      <table class="spec-table">
+        <tbody>
+          <tr><td>目的</td><td>三角筋前部・中部の肥大と肩幅の土台作り。バーベル版よりも可動域が広く、肥大効率が高い。</td></tr>
+          <tr><td>鍛えられる部位</td><td>三角筋前部（主）、三角筋中部（副）、上腕三頭筋、僧帽筋上部</td></tr>
+          <tr><td>重量目安</td><td>片手20〜26kg × 4セット × 8〜10rep</td></tr>
+          <tr><td>インターバル</td><td>2.5〜3分</td></tr>
+          <tr><td>フォームポイント</td><td>肘を90°で構え、真上にプッシュ。ダンベルをやや弧を描きながら頭上で合わせる。体を反らせすぎず、腹圧で体幹を固定。</td></tr>
+          <tr><td>効かせるコツ</td><td>トップで肩甲骨を上方回旋させ最大収縮。下ろす際は耳の横まで。</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- サイドレイズ -->
+    <div class="exercise-block green">
+      <div class="exercise-title">④ ダンベルサイドレイズ <span class="badge green">三角筋中部</span></div>
+      <table class="spec-table">
+        <tbody>
+          <tr><td>目的</td><td>三角筋中部を孤立して肥大させ、肩の丸み・横幅を作る最重要種目</td></tr>
+          <tr><td>鍛えられる部位</td><td>三角筋中部（主）</td></tr>
+          <tr><td>重量目安</td><td>片手8〜12kg × 4セット × 12〜15rep（1セット目は軽め）</td></tr>
+          <tr><td>インターバル</td><td>1.5〜2分</td></tr>
+          <tr><td>フォームポイント</td><td>肘をやや曲げ（15〜20°）、小指側が上になるよう外旋しながら腕を上げる。肩の高さまで（90°）で止める。反動を使わない。</td></tr>
+          <tr><td>よくあるミス</td><td>肩が上がりすぎて僧帽筋に入る。重量が重すぎて反動を使う。→ <strong>軽い重量で完全なフォームを優先。</strong></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- ケーブルサイドレイズ -->
+    <div class="exercise-block green">
+      <div class="exercise-title">⑤ ケーブルサイドレイズ <span class="badge green">三角筋中部（孤立）</span></div>
+      <table class="spec-table">
+        <tbody>
+          <tr><td>目的</td><td>ダンベルでは弱い「ボトム〜中間域」の負荷をケーブルで補完。三角筋中部をフル可動域で刺激。</td></tr>
+          <tr><td>鍛えられる部位</td><td>三角筋中部（全可動域）</td></tr>
+          <tr><td>重量目安</td><td>各10〜15kg × 3セット × 15rep（左右それぞれ）</td></tr>
+          <tr><td>インターバル</td><td>1.5分</td></tr>
+          <tr><td>フォームポイント</td><td>体の反対側のケーブルを持ち、体前を横切るように引く。肘の高さを意識。</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- フロントレイズ -->
+    <div class="exercise-block green">
+      <div class="exercise-title">⑥ ダンベルフロントレイズ <span class="badge green">三角筋前部</span></div>
+      <table class="spec-table">
+        <tbody>
+          <tr><td>目的</td><td>三角筋前部の孤立強化。ベンチプレスとショルダープレスで刺激されにくい前部外側を補完。</td></tr>
+          <tr><td>重量目安</td><td>片手10〜14kg × 3セット × 12rep（交互または両手同時）</td></tr>
+          <tr><td>インターバル</td><td>1.5分</td></tr>
+          <tr><td>フォームポイント</td><td>親指が上になるよう持ち、肩の高さまで上げる。体の揺れを最小限に。</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- リアデルトフライ -->
+    <div class="exercise-block green">
+      <div class="exercise-title">⑦ リアデルトフライ（ベントオーバー） <span class="badge green">三角筋後部</span></div>
+      <table class="spec-table">
+        <tbody>
+          <tr><td>目的</td><td>三角筋後部を発達させ、肩に立体感と奥行きを作る。姿勢改善にも直結。</td></tr>
+          <tr><td>鍛えられる部位</td><td>三角筋後部（主）、菱形筋、僧帽筋中部</td></tr>
+          <tr><td>重量目安</td><td>片手10〜14kg × 3セット × 15〜20rep</td></tr>
+          <tr><td>インターバル</td><td>1.5分</td></tr>
+          <tr><td>フォームポイント</td><td>上半身を床と平行に前傾、肘をやや曲げ、腕を後方・外側に開く。肩甲骨を寄せながら後部をしっかり収縮。</td></tr>
+          <tr><td>効かせるコツ</td><td>「脇を開く」より「後部を絞る」イメージ。腕より肘で引くと後部に入りやすい。</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- フェイスプル -->
+    <div class="exercise-block" style="border-left-color:#64748b;background:#f8fafc;">
+      <div class="exercise-title">⑧【補助】フェイスプル <span class="badge" style="background:#64748b;">三角筋後部・僧帽筋</span></div>
+      <table class="spec-table">
+        <tbody>
+          <tr><td>目的</td><td>三角筋後部・僧帽筋上部の筋力強化と肩関節の安定化・傷害予防</td></tr>
+          <tr><td>重量目安</td><td>20〜30kg × 3セット × 15〜20rep</td></tr>
+          <tr><td>インターバル</td><td>1分</td></tr>
+          <tr><td>フォームポイント</td><td>ロープを耳の高さに引き、外旋を意識。ゆっくり戻す。</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- シュラッグ -->
+    <div class="exercise-block" style="border-left-color:#64748b;background:#f8fafc;">
+      <div class="exercise-title">⑨【補助】ダンベルシュラッグ <span class="badge" style="background:#64748b;">僧帽筋上部</span></div>
+      <table class="spec-table">
+        <tbody>
+          <tr><td>目的</td><td>僧帽筋上部を肥大させ、首元の厚みと力強い肩のシルエットを作る</td></tr>
+          <tr><td>重量目安</td><td>片手30〜40kg × 3セット × 12〜15rep</td></tr>
+          <tr><td>インターバル</td><td>1.5分</td></tr>
+          <tr><td>フォームポイント</td><td>肩を「耳に近づける」ように真上に上げる。回旋は不要。頂点で1秒キープ。</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="warn-box">
+      <strong>Day2 総ボリューム目安：</strong>
+      スクワット（5set）＋ベンチプレス（3set）＋肩種目（約18〜21set）＝計26〜29set。所要時間 <strong>約110〜120分</strong>。
+    </div>
+  </div>
+</div>
+
+<!-- ========== P4: Day3 腕 ========== -->
+<div class="section page-break">
+  <div class="section-header purple">4. Day3｜腕（上腕二・三頭筋 + 前腕）</div>
+  <div class="section-body purple">
+
+    <!-- BP中強度 -->
+    <div class="exercise-block" style="border-left-color:#f59e0b;background:#fffbeb;">
+      <div class="exercise-title">① ベンチプレス <span class="badge" style="background:#f59e0b;">必須・中強度</span></div>
+      <table class="spec-table">
+        <tbody>
+          <tr><td>目的</td><td>技術維持と上腕三頭筋のウォームアップ。腕メイン日は中強度で実施。</td></tr>
+          <tr><td>重量目安</td><td><span class="highlight">50〜52.5kg（1RMの75〜78%）</span></td></tr>
+          <tr><td>セット × 回数</td><td>4セット × 8rep</td></tr>
+          <tr><td>インターバル</td><td>2〜2.5分</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- スクワット軽 -->
+    <div class="exercise-block" style="border-left-color:#f59e0b;background:#fffbeb;">
+      <div class="exercise-title">② スクワット <span class="badge" style="background:#f59e0b;">必須・軽補助</span></div>
+      <table class="spec-table">
+        <tbody>
+          <tr><td>目的</td><td>体幹・神経系の活性化。Day2で高強度実施後のため、回復重視の軽度実施。</td></tr>
+          <tr><td>重量目安</td><td><span class="highlight">67.5〜70kg（1RMの67.5〜70%）</span></td></tr>
+          <tr><td>セット × 回数</td><td>3セット × 8rep</td></tr>
+          <tr><td>インターバル</td><td>2分</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- バーベルカール -->
+    <div class="exercise-block purple">
+      <div class="exercise-title">③ バーベルカール <span class="badge purple">上腕二頭筋・メイン</span></div>
+      <table class="spec-table">
+        <tbody>
+          <tr><td>目的</td><td>上腕二頭筋の最大筋力と体積の増大。腕太さの基礎となるメイン種目。</td></tr>
+          <tr><td>鍛えられる部位</td><td>上腕二頭筋長頭・短頭（主）、腕橈骨筋（副）</td></tr>
+          <tr><td>重量目安</td><td>35〜42.5kg（EZバー） × 4セット × 8〜10rep</td></tr>
+          <tr><td>インターバル</td><td>2〜2.5分</td></tr>
+          <tr><td>フォームポイント</td><td>肘を体幹の脇に固定（前後させない）。肩を前に出さずに肘だけを屈曲。トップで完全収縮、ボトムで肘を完全伸展。</td></tr>
+          <tr><td>よくあるミス</td><td>体を後ろに反らせる（チーティング）→ 三頭筋・背中に逃げる。肘が前に出る→ 三頭筋・三角筋前部に逃げる。</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- スカルクラッシャー -->
+    <div class="exercise-block purple">
+      <div class="exercise-title">④ スカルクラッシャー（ライイングトライセプスエクステンション） <span class="badge purple">上腕三頭筋・メイン</span></div>
+      <table class="spec-table">
+        <tbody>
+          <tr><td>目的</td><td>上腕三頭筋長頭のストレッチ刺激で肥大。腕の太さの60〜70%を占める三頭筋の最重要種目。</td></tr>
+          <tr><td>鍛えられる部位</td><td>上腕三頭筋長頭（主）、内側頭・外側頭（副）</td></tr>
+          <tr><td>重量目安</td><td>EZバー 30〜37.5kg × 4セット × 10〜12rep</td></tr>
+          <tr><td>インターバル</td><td>2〜2.5分</td></tr>
+          <tr><td>フォームポイント</td><td>肘の位置を固定し、ひたすら肘の屈伸のみで動かす。バーを額（skull）に向かって下ろし、完全伸展まで押す。</td></tr>
+          <tr><td>注意点</td><td>肘が外に開くと外側頭に偏る。長頭狙いは肘を後頭部方向に軽く傾ける。</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- インクラインダンベルカール -->
+    <div class="exercise-block purple">
+      <div class="exercise-title">⑤ インクラインダンベルカール <span class="badge purple">上腕二頭筋長頭</span></div>
+      <table class="spec-table">
+        <tbody>
+          <tr><td>目的</td><td>ストレッチ位からのカールで上腕二頭筋長頭に深いストレッチ刺激。腕の「ピーク」を作る。</td></tr>
+          <tr><td>鍛えられる部位</td><td>上腕二頭筋長頭（高ストレッチ）</td></tr>
+          <tr><td>重量目安</td><td>片手12〜16kg × 3セット × 12rep</td></tr>
+          <tr><td>インターバル</td><td>2分</td></tr>
+          <tr><td>フォームポイント</td><td>インクラインベンチ45〜60°に座り、腕を自然に垂らす。肘を動かさずに肘を曲げ、完全収縮。ゆっくり下ろす（3秒エキセントリック）。</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- ケーブルプッシュダウン -->
+    <div class="exercise-block purple">
+      <div class="exercise-title">⑥ ケーブルトライセプスプッシュダウン <span class="badge purple">上腕三頭筋収縮</span></div>
+      <table class="spec-table">
+        <tbody>
+          <tr><td>目的</td><td>上腕三頭筋外側頭・内側頭の収縮刺激でディテールと密度を高める。</td></tr>
+          <tr><td>鍛えられる部位</td><td>上腕三頭筋外側頭・内側頭（主）</td></tr>
+          <tr><td>重量目安</td><td>25〜35kg × 3セット × 12〜15rep（ストレートバーまたはロープ）</td></tr>
+          <tr><td>インターバル</td><td>1.5分</td></tr>
+          <tr><td>フォームポイント</td><td>肘を体側に固定。完全伸展で1秒収縮、ゆっくり戻す。ロープ版は手首を回外（小指を広げる）で内側頭も刺激。</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- ハンマーカール -->
+    <div class="exercise-block purple">
+      <div class="exercise-title">⑦ ハンマーカール <span class="badge purple">上腕二頭筋・腕橈骨筋</span></div>
+      <table class="spec-table">
+        <tbody>
+          <tr><td>目的</td><td>腕橈骨筋と上腕二頭筋長頭を鍛え、腕の太さと「骨格感」を作る。</td></tr>
+          <tr><td>鍛えられる部位</td><td>腕橈骨筋（主）、上腕二頭筋長頭（副）、上腕筋</td></tr>
+          <tr><td>重量目安</td><td>片手16〜22kg × 3セット × 12rep</td></tr>
+          <tr><td>インターバル</td><td>1.5分</td></tr>
+          <tr><td>フォームポイント</td><td>親指が上（ニュートラルグリップ）。肘を固定し、収縮と伸展をコントロール。交互または同時どちらでも可。</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- オーバーヘッドトライセプス -->
+    <div class="exercise-block purple">
+      <div class="exercise-title">⑧ オーバーヘッドトライセプスエクステンション <span class="badge purple">長頭ストレッチ</span></div>
+      <table class="spec-table">
+        <tbody>
+          <tr><td>目的</td><td>長頭をストレッチ位で鍛え、腕の「裏側」の厚みを作る（スカルクラッシャーとの補完）</td></tr>
+          <tr><td>重量目安</td><td>ダンベル1本（両手）20〜30kg × 3セット × 12rep</td></tr>
+          <tr><td>インターバル</td><td>1.5分</td></tr>
+          <tr><td>フォームポイント</td><td>頭の後ろにダンベルを下ろし、肘を耳に近づけたまま真上に押す。肘が外に開かないよう注意。</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- 前腕 -->
+    <div class="exercise-block" style="border-left-color:#64748b;background:#f8fafc;">
+      <div class="exercise-title">⑨【補助】リストカール ＋ リバースカール <span class="badge" style="background:#64748b;">前腕</span></div>
+      <table>
+        <thead><tr><th style="background:#64748b;">種目</th><th style="background:#64748b;">重量目安</th><th style="background:#64748b;">セット×回数</th><th style="background:#64748b;">ポイント</th></tr></thead>
+        <tbody>
+          <tr><td>リストカール（手首屈曲）</td><td>15〜20kg</td><td>3 × 20rep</td><td>前腕屈筋群。手首だけ屈曲。</td></tr>
+          <tr><td>リバースリストカール（手首伸展）</td><td>10〜15kg</td><td>3 × 15rep</td><td>前腕伸筋群。骨折予防にも有効。</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="warn-box">
+      <strong>Day3 総ボリューム目安：</strong>
+      ベンチプレス（4set）＋スクワット（3set）＋腕種目（約21〜24set）＝計28〜31set。所要時間 <strong>約100〜115分</strong>。
+    </div>
+  </div>
+</div>
+
+<!-- ========== P5: 4週間重量増加プラン ========== -->
+<div class="section page-break">
+  <div class="section-header orange">5. 4週間重量増加プラン（プログレッション）</div>
+  <div class="section-body orange">
+
+    <h2>ベンチプレス 4週間プログレッション</h2>
+    <table>
+      <thead>
+        <tr>
+          <th class="orange">実施日</th>
+          <th class="orange">Week1（導入）</th>
+          <th class="orange">Week2（増量）</th>
+          <th class="orange">Week3（強度）</th>
+          <th class="orange">Week4（ディロード）</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Day1（胸・HIGH）</strong></td>
+          <td>52.5kg × 5×6</td>
+          <td>55kg × 5×6</td>
+          <td>57.5kg × 5×5</td>
+          <td>47.5kg × 3×8</td>
+        </tr>
+        <tr>
+          <td><strong>Day2（肩・LOW）</strong></td>
+          <td>47.5kg × 3×8</td>
+          <td>47.5kg × 3×8</td>
+          <td>50kg × 3×8</td>
+          <td>42.5kg × 3×6</td>
+        </tr>
+        <tr>
+          <td><strong>Day3（腕・MED）</strong></td>
+          <td>50kg × 4×8</td>
+          <td>52.5kg × 4×8</td>
+          <td>52.5kg × 4×7</td>
+          <td>45kg × 3×8</td>
+        </tr>
+        <tr>
+          <td><strong>目標1RM換算</strong></td>
+          <td>約65kg</td>
+          <td>約67.5kg（現状維持）</td>
+          <td>約70kg</td>
+          <td>回復週</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>スクワット 4週間プログレッション</h2>
+    <table>
+      <thead>
+        <tr>
+          <th class="orange">実施日</th>
+          <th class="orange">Week1（導入）</th>
+          <th class="orange">Week2（増量）</th>
+          <th class="orange">Week3（強度）</th>
+          <th class="orange">Week4（ディロード）</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Day1（胸・LOW）</strong></td>
+          <td>65kg × 3×8</td>
+          <td>65kg × 3×8</td>
+          <td>67.5kg × 3×6</td>
+          <td>60kg × 3×6</td>
+        </tr>
+        <tr>
+          <td><strong>Day2（肩・HIGH）</strong></td>
+          <td>80kg × 5×6</td>
+          <td>82.5kg × 5×5</td>
+          <td>85kg × 5×4〜5</td>
+          <td>70kg × 3×8</td>
+        </tr>
+        <tr>
+          <td><strong>Day3（腕・MED）</strong></td>
+          <td>70kg × 3×8</td>
+          <td>72.5kg × 3×8</td>
+          <td>75kg × 3×6</td>
+          <td>62.5kg × 3×6</td>
+        </tr>
+        <tr>
+          <td><strong>目標1RM換算</strong></td>
+          <td>約100kg</td>
+          <td>約103kg</td>
+          <td>約107kg</td>
+          <td>回復週</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>補助種目（胸・肩・腕）4週間プログレッション</h2>
+    <table>
+      <thead>
+        <tr>
+          <th class="orange">種目</th>
+          <th class="orange">Week1</th>
+          <th class="orange">Week2（+2.5kg）</th>
+          <th class="orange">Week3（+2.5kg）</th>
+          <th class="orange">Week4（ディロード）</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>インクラインDBプレス（片手）</td><td>20kg × 4×12</td><td>22kg × 4×10</td><td>24kg × 4×8〜10</td><td>18kg × 3×12</td></tr>
+        <tr><td>ダンベルショルダープレス（片手）</td><td>20kg × 4×10</td><td>22kg × 4×9</td><td>24kg × 4×8</td><td>18kg × 3×10</td></tr>
+        <tr><td>サイドレイズ（片手）</td><td>9kg × 4×15</td><td>10kg × 4×14</td><td>11kg × 4×12</td><td>8kg × 3×15</td></tr>
+        <tr><td>バーベルカール（EZ）</td><td>35kg × 4×10</td><td>37.5kg × 4×9</td><td>40kg × 4×8</td><td>32.5kg × 3×10</td></tr>
+        <tr><td>スカルクラッシャー（EZ）</td><td>30kg × 4×12</td><td>32.5kg × 4×10</td><td>35kg × 4×9</td><td>27.5kg × 3×12</td></tr>
+      </tbody>
+    </table>
+
+    <div class="info-box">
+      <strong>プログレッションルール：</strong>
+      設定回数をすべてのセットでクリアできた場合、次週に2.5kg増量。1セットでもクリアできない場合は同重量で継続。Week4は必ずディロードを実施し、神経系・関節を回復させる（4週サイクルを繰り返す）。
+    </div>
+  </div>
+</div>
+
+<!-- ========== P6: 栄養戦略 ========== -->
+<div class="section page-break">
+  <div class="section-header teal">6. 栄養戦略</div>
+  <div class="section-body teal">
+
+    <div class="info-box">
+      <strong>基本方針：</strong>現在76.5kg・体脂肪率22%から、リコンプ（脂肪を落としながら筋肉を増やす）を目指す。カロリーを大きく上げるのではなく、<span class="highlight">タンパク質を最大化しながら総カロリーを維持〜+200kcal</span>の範囲でコントロールする。
+    </div>
+
+    <h2>1日の栄養目標</h2>
+    <table>
+      <thead><tr><th class="teal">栄養素</th><th class="teal">目標量</th><th class="teal">根拠・計算式</th><th class="teal">食品例</th></tr></thead>
+      <tbody>
+        <tr><td><strong>タンパク質</strong></td><td><span class="highlight">150〜160g/日</span>（体重×2g）</td><td>筋肥大の最低必要量2g/kg×76.5kg</td><td>鶏むね、プロテイン、卵白、マグロ</td></tr>
+        <tr><td><strong>炭水化物</strong></td><td>250〜300g/日</td><td>筋グリコーゲン確保。運動日は多め。</td><td>白米、オートミール、さつまいも、バナナ</td></tr>
+        <tr><td><strong>脂質</strong></td><td>60〜70g/日</td><td>ホルモン産生に必要。全体の20〜25%</td><td>アボカド、アーモンド、オリーブオイル</td></tr>
+        <tr><td><strong>総カロリー</strong></td><td>2,400〜2,600kcal/日</td><td>TDEE≒2,300kcal + 200kcal（微バルク）</td><td>—</td></tr>
+      </tbody>
+    </table>
+
+    <h2>トレーニング前後の食事タイミング</h2>
+    <table>
+      <thead><tr><th class="teal">タイミング</th><th class="teal">内容</th><th class="teal">目的</th></tr></thead>
+      <tbody>
+        <tr><td>トレ2〜3時間前</td><td>白米150〜200g ＋ 鶏むね150g ＋ 野菜</td><td>筋グリコーゲン充填。消化に時間を確保。</td></tr>
+        <tr><td>トレ30分前（任意）</td><td>バナナ1本 ＋ EAAまたはBCAA</td><td>即効エネルギー補給、筋分解抑制</td></tr>
+        <tr><td>トレ中</td><td>EAA（8〜10g）またはBCAA ＋ 水500ml/時間</td><td>筋タンパク合成促進、疲労軽減</td></tr>
+        <tr><td>トレ直後（30分以内）</td><td>プロテイン30〜40g ＋ バナナ1〜2本</td><td>アナボリックウィンドウの活用。タンパク＋糖質を速やかに補給。</td></tr>
+        <tr><td>就寝1〜2時間前</td><td>カゼインプロテイン20〜30g または ギリシャヨーグルト</td><td>夜間の筋タンパク合成持続（成長ホルモン分泌中に材料供給）</td></tr>
+      </tbody>
+    </table>
+
+    <h2>推奨サプリメント</h2>
+    <table>
+      <thead><tr><th class="teal">サプリ</th><th class="teal">摂取量・タイミング</th><th class="teal">効果・根拠</th><th class="teal">優先度</th></tr></thead>
+      <tbody>
+        <tr><td><strong>ホエイプロテイン</strong></td><td>30〜40g / トレ後・朝食</td><td>吸収速度が速く、トレ後のアナボリック反応を最大化</td><td>⭐⭐⭐ 必須</td></tr>
+        <tr><td><strong>クレアチン</strong></td><td>5g/日（毎日、タイミング不問）</td><td>ATP再合成を高め、出力・回数・筋肥大すべてを底上げ。最も科学的根拠が強い。</td><td>⭐⭐⭐ 必須</td></tr>
+        <tr><td><strong>EAA/BCAA</strong></td><td>8〜10g / トレ中</td><td>トレーニング中の筋分解（カタボリズム）を抑制し、持続的なパフォーマンスを維持</td><td>⭐⭐ 推奨</td></tr>
+        <tr><td><strong>カフェイン（プレワークアウト）</strong></td><td>150〜200mg / トレ30〜45分前</td><td>集中力・出力向上。週3回以内に留め、耐性がつかないようにする。</td><td>⭐⭐ 推奨</td></tr>
+        <tr><td><strong>ビタミンD（3,000〜5,000IU）</strong></td><td>朝食と一緒に</td><td>テストステロン産生・免疫機能・骨密度に関与。室内トレーニングで不足しがち。</td><td>⭐⭐ 推奨</td></tr>
+        <tr><td><strong>カゼインプロテイン</strong></td><td>20〜30g / 就寝前</td><td>ゆっくり吸収され、睡眠中の筋タンパク合成を7〜8時間サポート</td><td>⭐ オプション</td></tr>
+        <tr><td><strong>マグネシウム（グリシネート）</strong></td><td>300mg / 就寝前</td><td>睡眠の質向上・筋痙攣予防・テストステロン産生サポート</td><td>⭐ オプション</td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- ========== P7: 回復戦略 ========== -->
+<div class="section page-break">
+  <div class="section-header red">7. 回復戦略</div>
+  <div class="section-body" style="border-color:#dc2626;">
+
+    <h2>睡眠戦略</h2>
+    <table>
+      <thead><tr><th class="red">項目</th><th class="red">推奨値</th><th class="red">理由</th></tr></thead>
+      <tbody>
+        <tr><td><strong>睡眠時間</strong></td><td><span class="highlight">7.5〜9時間</span></td><td>成長ホルモン（GH）の90%以上が深睡眠中に分泌。6時間未満でテストステロンが10〜15%低下。</td></tr>
+        <tr><td><strong>就寝時間</strong></td><td>22:00〜23:30</td><td>GH分泌のピーク（入眠後1〜2時間目）を深夜前に持ってくる</td></tr>
+        <tr><td><strong>起床時間</strong></td><td>6:00〜7:30</td><td>サーカディアンリズムの安定化。コルチゾールの朝のピークを活用。</td></tr>
+        <tr><td><strong>睡眠環境</strong></td><td>室温18〜20°C、遮光、スマホ禁止（寝る1時間前）</td><td>深部体温低下による深睡眠誘導。ブルーライスはメラトニン分泌を妨げる。</td></tr>
+      </tbody>
+    </table>
+
+    <h2>週間スケジュール例（週4回の場合）</h2>
+    <table>
+      <thead><tr><th class="red">曜日</th><th class="red">内容</th><th class="red">ポイント</th></tr></thead>
+      <tbody>
+        <tr><td>月曜日</td><td>Day1（胸）</td><td>週の初め、最もエネルギーが高い状態でBP高強度</td></tr>
+        <tr><td>火曜日</td><td>休息（アクティブリカバリー可）</td><td>軽いウォーキング・ストレッチ・マッサージ</td></tr>
+        <tr><td>水曜日</td><td>Day2（肩）</td><td>胸の疲労が残らないよう1日空ける</td></tr>
+        <tr><td>木曜日</td><td>休息</td><td>スクワット後の脚の回復</td></tr>
+        <tr><td>金曜日</td><td>Day3（腕）</td><td>週の疲労ピーク。ただし腕は回復が速い部位。</td></tr>
+        <tr><td>土曜日</td><td>Day1（胸） or 休息</td><td>週4回の場合、もう一度胸を実施（その場合BPは中強度）</td></tr>
+        <tr><td>日曜日</td><td>完全休養</td><td>メンタルリカバリー、睡眠優先</td></tr>
+      </tbody>
+    </table>
+
+    <div class="grid2" style="margin-top:12px;">
+      <div>
+        <h2>筋肉痛・疲労の判断基準</h2>
+        <table>
+          <thead><tr><th class="red">状態</th><th class="red">対応</th></tr></thead>
+          <tbody>
+            <tr><td>軽度の筋肉痛</td><td>予定通りトレーニング実施</td></tr>
+            <tr><td>強い筋肉痛</td><td>重量を10〜15%下げてフォーム練習</td></tr>
+            <tr><td>関節痛・鋭い痛み</td><td>即座にトレーニング中止・専門家に相談</td></tr>
+            <tr><td>慢性的な疲労感</td><td>1週間のディロード週を設ける</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div>
+        <h2>アクティブリカバリー</h2>
+        <ul style="margin-top:6px;">
+          <li>軽いウォーキング（20〜30分・低強度）</li>
+          <li>ストレッチ・フォームローリング（大腿四頭筋、大胸筋、肩）</li>
+          <li>冷水シャワー（トレ後5〜10分）：炎症軽減</li>
+          <li>温泉・サウナ（週1〜2回）：副交感神経を活性化し回復促進</li>
+          <li>水分補給：体重×35〜40ml/日（約2.5〜3L）</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ========== P8: 実施時の注意事項 ========== -->
+<div class="section page-break">
+  <div class="section-header" style="background:#374151;">8. 実施時の注意事項</div>
+  <div class="section-body" style="border-color:#374151;">
+
+    <div class="grid2">
+      <div>
+        <h2>ウォームアップの重要性</h2>
+        <div class="info-box">
+          <strong>全セッション共通ウォームアップ（10〜15分）：</strong>
+          <ol style="padding-left:16px;font-size:11px;">
+            <li>有酸素（バイク・ロウイング）5分</li>
+            <li>肩甲骨・胸椎モビリティ3〜5分</li>
+            <li>スクワット対象日：股関節サークル・モンスターウォーク</li>
+            <li>ベンチ対象日：肩のCARs、バンドプルアパート</li>
+          </ol>
+        </div>
+      </div>
+      <div>
+        <h2>種目の優先順位</h2>
+        <div class="info-box">
+          <strong>疲労時の削除優先順位：</strong>
+          <ol style="padding-left:16px;font-size:11px;">
+            <li>補助種目（最後の1〜2種目）を削除</li>
+            <li>セット数を1〜2セット削減</li>
+            <li>重量を10〜15%落として実施</li>
+            <li>ベンチプレス・スクワットは最低3セット必ず実施</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+
+    <h2>オーバートレーニング防止チェックリスト</h2>
+    <table>
+      <thead><tr><th>チェック項目</th><th>OKの目安</th><th>要注意サイン</th></tr></thead>
+      <tbody>
+        <tr><td>安静時心拍数</td><td>平常時±5bpm以内</td><td>+10bpm以上→ 休養優先</td></tr>
+        <tr><td>モチベーション</td><td>トレが楽しみ・やる気がある</td><td>ジムに行くのが辛い・気力ゼロ</td></tr>
+        <tr><td>睡眠の質</td><td>熟睡できる・目覚めがよい</td><td>寝つきが悪い・夜中に目が覚める</td></tr>
+        <tr><td>パフォーマンス</td><td>前回同等以上の重量・回数</td><td>2週間以上停滞・下降</td></tr>
+        <tr><td>食欲</td><td>通常通りある</td><td>著しく落ちている</td></tr>
+      </tbody>
+    </table>
+
+    <h2>体重・体組成の管理</h2>
+    <table>
+      <thead><tr><th>測定項目</th><th>頻度</th><th>目標値（3ヶ月後）</th></tr></thead>
+      <tbody>
+        <tr><td>体重</td><td>毎朝（起床後・排泄後・空腹時）</td><td>75〜78kg（筋肉増・脂肪維持〜微減）</td></tr>
+        <tr><td>体脂肪率</td><td>月1回</td><td>18〜20%（2〜4%減）</td></tr>
+        <tr><td>ベンチプレス1RM</td><td>月末（Week4終了後）</td><td>75〜80kg</td></tr>
+        <tr><td>スクワット1RM</td><td>月末（Week4終了後）</td><td>110〜115kg</td></tr>
+        <tr><td>腕周り（力こぶ）</td><td>月1回</td><td>+1〜2cm</td></tr>
+        <tr><td>肩幅（肩峰間距離）</td><td>月1回</td><td>+0.5〜1cm（視覚的変化）</td></tr>
+      </tbody>
+    </table>
+
+    <div class="warn-box" style="margin-top:12px;">
+      <strong>⚠️ 重要：</strong>このプログラムは一般的な健康体を前提としています。既往症・関節痛がある場合は必ずトレーナーまたは医師に相談してから実施してください。重量を上げることより<strong>「正しいフォームでの完遂」</strong>を最優先にしてください。数字より<strong>ボディコンポジションの変化</strong>を重視し、見た目の変化を楽しみながら継続することが最も重要です。
+    </div>
+
+    <div class="tip-box" style="margin-top:10px;">
+      <strong>💪 目標の現実的な見通し（3〜6ヶ月）：</strong><br>
+      筋肥大は短期では感じにくいですが、3ヶ月で体脂肪2〜3%減・筋肉1〜2kg増は十分達成可能なラインです。ベンチプレスは3ヶ月で<strong>67.5kg→75〜80kg</strong>、スクワットは<strong>100kg→110〜115kg</strong>を目指してください。毎週の記録をつけることで、確実なプログレッションと継続するモチベーションを維持できます。
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
