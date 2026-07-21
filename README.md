@@ -40,14 +40,14 @@ PWA（Web App Manifest + Service Worker）
 
 **インフラ**: フロントエンド = Vercel / バックエンド = Railway / DB = PostgreSQL（Neon）
 
-## 起動方法
+## セットアップ
 
 ### 前提条件
 
 - Node.js 18以上
 - PostgreSQL接続文字列（[Neon](https://neon.tech) の無料枠推奨）
 
-### セットアップ
+### 手順
 
 ```bash
 # バックエンド（ターミナル1）
